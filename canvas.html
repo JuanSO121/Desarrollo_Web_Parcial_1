@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juvana</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/atom.png">
+</head>
+<body>
+    <!--NAVBAR (Puedes dejar comentado si no lo estás usando actualmente)-->
+    <!--
+    <nav>
+        <ul>
+            <li><a class="active" href="#canvas">Canvas</a></li>
+            <li><a href="#">Prototipo Página</a></li>
+            <li><a href="#contact">Maquetación Juego</a></li>
+            <li><a href="#about">Maquetación salas</a></li>
+        </ul>
+    </nav>
+    -->
+    <!-- CANVAS -->
+    <section class="container">
+        <div id="toolbar">
+            <h1>JUVANA</h1>
+            <h2>PAINT</h2>
+            <label for="stroke">Color</label>
+            <input id="stroke" name="stroke" type="color">
+            <label for="lineWidth">Grosor</label>
+            <input id="lineWidth" name="lineWidth" type="number" value="5">
+            <button id="clear">Borrar</button>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board"></canvas>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juega</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="grid grid-cols-6 grid-rows-10 gap-6">
+        <!-- <div class="col-span-6 rounded-md">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://cdn.animaapp.com/projects/65fe22cee300805e54e5a20f/releases/65fe22ebbd4cdb6b782c7675/img/atom-editor@2x.png" alt="Atom Editor" width="50" height="50" class="atom">
+                    <span>Juvana</span>
+                </div>
+                <div class="menu">
+                    <a href="#">Menú</a>
+                    <a href="#">Cómo Jugar</a>
+                    <a href="#">Crear Sala</a>
+                    <a href="#">Unirse a una Sala</a>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="login">Ingresar</a>
+                    <a href="#" class="register">Registrarse</a>
+                </div>
+            </nav>
+        </div> -->
+        <div class="col-span-2 row-span-8 col-start-1 row-start-3 bg-blue-500 rounded-md"></div>
+        <div class="row-span-5 col-start-3 row-start-3 rounded-md" id="toolbar">
+            <label for="stroke">Color</label>
+            <input id="stroke" name="stroke" type="color">
+            <label for="lineWidth">Grosor</label>
+            <input id="lineWidth" name="lineWidth" type="number" value="5">
+            <button id="clear">Borrar</button>
+        </div>
+        <div class="col-span-3 col-start-4 row-start-2 rounded-md bg-yellow-500">5</div>
+        <!-- Aquí se colocará el canvas -->
+        <div class="col-span-3 row-span-5 col-start-4 row-start-3 rounded-md" >
+            <div class="drawing-board">
+                <canvas id="drawing-board"></canvas>
+            </div>
+        </div>
+        <!-- Sección de comentarios -->
+        <div class="col-span-4 row-span-3 col-start-3 row-start-8 bg-purple-500 flex flex-col justify-end items-center rounded-md">
+            <div id="comment-section" class="mb-2">
+            </div>
+            <div class="flex items-center">
+                <input type="text" id="comment-input" class="mr-2" placeholder="">
+                <button id="submit-comment" class="text-white bg-green-500 px-3 py-1 rounded-md"><i class='bx bxs-send rounded-md'></i></button>
+            </div>
+        </div>
+        <div class="col-start-1 row-start-2 rounded-md bg-pink-500">11</div>
+        <div class="col-start-3 row-start-2 rounded-md bg-gray-500">12</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
