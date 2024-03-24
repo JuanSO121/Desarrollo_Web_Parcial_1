@@ -1,4 +1,5 @@
 /* CSS */
+
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +72,7 @@ canvas {
 
 /* Estilos específicos para el navbar */
 .navbar {
+  font-weight: bold;
   font-family: 'Poppins', Helvetica;
   display: flex;
   justify-content: space-between;
@@ -83,7 +85,7 @@ canvas {
   display: flex;
   align-items: center;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 4px;
   text-transform: uppercase;
 }
 
@@ -120,4 +122,31 @@ canvas {
 #comment-input {
   width: 120vh;
   border-radius: 8px;
+}
+
+.player-list {
+  width: 200px;
+  padding: 20px;
+}
+.player {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.player .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 40px;
+  
+}
+.player .name {
+  font-weight: bold;
+}
+.player .score {
+  color: #9455dc;
+}
+
+.bg-custom {
+  background-color: #343337;
 }
