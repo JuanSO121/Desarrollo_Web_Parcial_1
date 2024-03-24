@@ -21,8 +21,11 @@ body {
 }
 
 #toolbar {
+  
+  font-family: 'Poppins', Helvetica;
   padding: 20px;
   background-color: #343337; /* Color de fondo del menú lateral */
+  color: #9455dc;
 }
 
 #toolbar h1, #toolbar h2 {
@@ -40,10 +43,22 @@ body {
 #toolbar button {
   width: 100%;
   margin-bottom: 2vh;
+  border-radius: 5px;
 }
 
 #toolbar button {
-  background-color: #305cd5;
+  background-color: #9455dc;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px;
+}
+
+#barra{
+  padding: 10px;
+}
+#enviar {
+  background-color: #261a32;
   border: none;
   border-radius: 4px;
   color: white;
@@ -63,6 +78,7 @@ canvas {
   border-radius: 15px;
   width: 100%; /* Establece el ancho del canvas al 100% del contenedor */
   height: 19.66vw; /* Establece la altura del canvas al 100% del contenedor */
+  background-color: #ffffff;
 }
 
 /* styles.css */
@@ -126,7 +142,7 @@ canvas {
 
 .player-list {
   width: 200px;
-  padding: 20px;
+  padding: 50px;
 }
 .player {
   display: flex;
@@ -149,4 +165,62 @@ canvas {
 
 .bg-custom {
   background-color: #343337;
+}
+
+
+
+.button-back {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100%; /* Ajusta la altura del botón para que ocupe todo el div */
+  background-color: #9455dc;
+  border-radius: 15px;
+  margin-bottom: 1rem; 
+}
+
+.button-back i {
+    font-size: 1.5rem; /* Ajusta el tamaño del icono según sea necesario */
+}
+
+.icon-size {
+  font-size: 2rem; /* Cambia el tamaño del icono según sea necesario */
+}
+
+.btn-clear {
+  background-color: #ab6bff;
+  color: white; /* Cambia el color del texto para que sea legible sobre el fondo */
+  border: none; /* Quita el borde */
+  padding: 15px; /* Ajusta el relleno según sea necesario */
+  border-radius: 0.25rem; /* Agrega bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
+}
+
+.btn-clear:hover {
+  background-color: #8b53e1; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+
+#timer {
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco para contraste */
+  text-align: center; /* Centrar el texto */
+  padding: 0.5rem; /* Añadir un poco de espacio alrededor del texto */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  width: 50%;
+}
+
+#stroke {
+  color: black; /* Color del borde y del cursor */
+  border-radius: 4px; /* Redondear las esquinas */
+}
+.player1 {
+  background-color: #9455dc; /* Color de fondo */
+}
+
+#ahorcado {
+  font-size: 1.8rem; /* Ajusta el tamaño del guion bajo según sea necesario */
+  background-color: #9455dc;
+  padding-left: 10%;
 }

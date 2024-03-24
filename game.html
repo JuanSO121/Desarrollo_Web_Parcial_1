@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="./src/output.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.0/css/boxicons.min.css">
+
 </head>
 <body>
     <div class="grid grid-cols-6 grid-rows-10 gap-6">
@@ -33,7 +35,7 @@
                 </div>
             </nav>
         </div> -->
-        <div class="col-span-2 row-span-8 col-start-1 row-start-3 rounded-md">
+        <div class="col-span-2 row-span-8 col-start-1 row-start-3 rounded-md bg-custom">
             <div class="player-list">
                 <div class="player">
                     <img class="avatar" src="img/gato.png" alt="Avatar de KATTY">
@@ -63,13 +65,6 @@
                         <div class="score">10 puntos</div>
                     </div>
                 </div>
-                <div class="player">
-                    <img class="avatar" src="img/reno.png" alt="Avatar de KATTY">
-                    <div>
-                        <div class="name">LINA</div>
-                        <div class="score">0 puntos</div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="row-span-5 col-start-3 row-start-3 rounded-md" id="toolbar">
@@ -77,9 +72,9 @@
             <input id="stroke" name="stroke" type="color">
             <label for="lineWidth">Grosor</label>
             <input id="lineWidth" name="lineWidth" type="number" value="5">
-            <button id="clear">Borrar</button>
+            <button id="clear"><i class='bx bx-brush bx-rotate-180' ></i></button>
         </div>
-        <div class="col-span-3 col-start-4 row-start-2 rounded-md bg-yellow-500">5</div>
+        <div class="col-span-3 col-start-4 row-start-2 rounded-md" id="ahorcado"> _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</div>
         <!-- Aquí se colocará el canvas -->
         <div class="col-span-3 row-span-5 col-start-4 row-start-3 rounded-md" >
             <div class="drawing-board">
@@ -90,14 +85,48 @@
         <div class="col-span-4 row-span-3 col-start-3 row-start-8 bg-purple-500 flex flex-col justify-end items-center rounded-md">
             <div id="comment-section" class="mb-2">
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center" id="barra">
                 <input type="text" id="comment-input" class="mr-2" placeholder="">
-                <button id="submit-comment" class="text-white bg-green-500 px-3 py-1 rounded-md"><i class='bx bxs-send rounded-md'></i></button>
+                <i class='bx bxs-send rounded-md' id="enviar"></i>
             </div>
         </div>
-        <div class="col-start-1 row-start-2 rounded-md bg-pink-500">11</div>
-        <div class="col-start-3 row-start-2 rounded-md bg-gray-500">12</div>
+        <div class="col-start-1 row-start-2 rounded-md ">
+            <a href="index.html" class="button-back">
+                <i class='bx bxs-left-arrow'></i>
+            </a>
+        </div>
+        <div class="col-start-3 row-start-2 rounded-md bg-gray-500" id="timer">03:00</div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Obtener referencia al elemento del timer
+        const timerElement = document.getElementById('timer');
+    
+        // Función para formatear el tiempo en minutos y segundos
+        function formatTime(minutes, seconds) {
+            return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+    
+        // Función para actualizar el timer cada segundo
+        function updateTimer() {
+            let totalSeconds = 180; // 3 minutos
+    
+            const timerInterval = setInterval(() => {
+                const minutes = Math.floor(totalSeconds / 60);
+                const seconds = totalSeconds % 60;
+    
+                timerElement.textContent = formatTime(minutes, seconds);
+    
+                if (totalSeconds <= 0) {
+                    clearInterval(timerInterval); // Detener el temporizador cuando llega a cero
+                } else {
+                    totalSeconds--;
+                }
+            }, 1000);
+        }
+    
+        // Llamar a la función para iniciar el timer
+        updateTimer();
+    </script>
 </body>
 </html>
